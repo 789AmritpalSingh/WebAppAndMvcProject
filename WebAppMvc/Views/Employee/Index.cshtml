@@ -1,0 +1,80 @@
+﻿@model IEnumerable<WebAppMvc.Models.MvcEmployee>
+
+
+    @{
+        ViewBag.Title = "Index";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+
+    <table class="table table-striped">
+        <thead class="table-heading">
+            <tr>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.emp_name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.emp_email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.emp_gender)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.noOfDependants)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Additions)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ITex)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CPP)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EI)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GrossSalary)
+                </th>
+                <th>Actions</th>
+
+            </tr>
+        </thead>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.emp_name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.emp_email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.emp_gender)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.noOfDependants)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Additions)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ITex)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CPP)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EI)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GrossSalary)
+                </td>
+
+            </tr>
+
+        }
+    </table>

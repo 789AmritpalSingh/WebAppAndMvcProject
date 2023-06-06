@@ -1,0 +1,40 @@
+﻿@model IEnumerable<MVCCustomers.Models.Customers>
+
+<table>
+	<thead>
+
+		<tr>
+			<th>
+				@Html.DisplayNameFor(model => model.Customer_id)
+			</th>
+
+			<th>
+				@Html.DisplayNameFor(model => model.Customer_name)
+			</th>
+
+			<th>
+				@Html.DisplayNameFor(model => model.Customer_balance)
+			</th>
+		</tr>
+
+	</thead>
+
+	<tbody>
+		@foreach(var item in Model)
+		{
+			<tr>
+				<td>
+					@Html.DisplayFor(modelItem => item.Customer_id)
+				</td>
+
+				<td>
+					@Html.DisplayFor(modelItem => item.Customer_name)
+				</td>
+
+				<td>
+					@Html.DisplayFor(modelItem => item.Customer_balance)
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
